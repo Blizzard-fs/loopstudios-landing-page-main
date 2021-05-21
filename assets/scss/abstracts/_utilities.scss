@@ -1,0 +1,53 @@
+@import "variables";
+@import "../base/typography";
+
+.container{
+
+  padding: 2rem;
+  margin-top: 5rem;
+
+  .container__image {
+
+    margin-bottom: 5rem;
+
+  }
+
+  .content__title, .left__title {
+
+    @include fontJosefin();
+
+    padding-bottom: 2rem;
+
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $primary-700;
+    white-space: pre-line;
+  }
+
+  .content__paragraph {
+
+    @include fontAlata();
+
+    padding: 0 2rem;
+
+    text-align: center;
+    line-height: 3rem;
+    color: $primary-400;
+
+  }
+
+  .container__right{
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .container__flex--mobile{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+.grid{
+  display: none;
+}

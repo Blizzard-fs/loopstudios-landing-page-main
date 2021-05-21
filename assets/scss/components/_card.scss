@@ -1,0 +1,50 @@
+@import "../base/typography";
+@import "../abstracts/variables";
+
+
+.flex__card{
+
+  aspect-ratio: 654/240;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+  position: relative;
+
+  &:before{
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient( to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5) );
+
+  }
+
+  .card__title{
+
+    @include fontJosefin;
+
+    position: absolute;
+    z-index: 33;
+    bottom: 2rem;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $primary-100;
+    white-space: pre-line;
+
+  }
+
+  &:nth-child(1){
+    margin-top: 3rem;
+  }
+
+}

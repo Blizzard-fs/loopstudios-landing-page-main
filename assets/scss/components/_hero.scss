@@ -1,0 +1,80 @@
+@import "../abstracts/variables";
+@import "../base/typography";
+
+
+.hero {
+
+  background-image: url("../../images/mobile/image-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  padding: 4.5rem 2.5rem;
+
+  .hero__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      flex-basis: 50%;
+    }
+
+  }
+
+  .hero__title{
+
+    @include fontJosefin();
+
+    margin: 20rem 0;
+    padding: 2rem;
+
+    border: 1px solid $primary-100;
+
+    font-size: 4rem;
+    color: $primary-100;
+    text-transform: uppercase;
+
+    white-space: pre-line;
+  }
+
+}
+
+
+.hero__left{
+
+
+
+}
+
+.hero__right{
+
+  .navigation {
+
+    height: 100%;
+    text-align: right;
+
+  }
+
+  .navigation__hamburger{
+
+    padding-top: 7.5px;
+
+    &:hover{
+
+      cursor: pointer;
+
+    }
+
+  }
+
+  .navigation__desktop{
+
+    display: none;
+
+  }
+
+}

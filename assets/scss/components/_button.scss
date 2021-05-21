@@ -1,0 +1,14 @@
+@import "../abstracts/variables";
+@import "../base/typography";
+.button{
+  @include fontAlata();
+
+  padding: 1rem 4rem;
+  border: 1px solid $primary-700;
+
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: $primary-700;
+}

@@ -1,0 +1,21 @@
+/*
+
+Main Colors
+
+*/
+
+$primary-100: hsl(0, 0%, 100%);
+$primary-400: hsl(0, 0%, 55%);
+$primary-500: hsl(0, 0%, 41%);
+$primary-700: hsl(0, 0%, 0%);
+
+$mobile-urls: (
+  --curiosity: url("../../images/mobile/image-curiosity.jpg"),
+  --earth: url("../../images/mobile/image-deep-earth.jpg"),
+  --fisheye: url("../../images/mobile/image-fisheye.jpg"),
+  --abovevr: url("../../images/mobile/image-from-above.jpg"),
+  --grid: url("../../images/mobile/image-grid.jpg"),
+  --arcade: url("../../images/mobile/image-night-arcade.jpg"),
+  --pocket: url("../../images/mobile/image-pocket-borealis.jpg"),
+  --teamvr: url("../../images/mobile/image-soccer-team.jpg"),
+);

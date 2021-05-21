@@ -1,0 +1,63 @@
+@import "../abstracts/variables";
+@import "../base/typography";
+
+.footer{
+
+  margin-top: 8rem;
+  padding: 5rem;
+  background-color: $primary-700;
+  display: flex;
+  flex-direction: column;
+
+  div{
+
+    text-align: center;
+
+  }
+
+  .footer__list{
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    margin: 2.5rem 0 4.5rem;
+
+  }
+
+  .list__item{
+
+    @include fontAlata();
+
+    padding: 1.5rem 0;
+
+    & a {
+      color: $primary-100;
+      text-decoration: none;
+    }
+
+  }
+
+  .footer__socials{
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+    padding: 0 6rem;
+
+  }
+
+  .footer__rights{
+
+    @include fontAlata();
+
+    padding: 1em 0;
+
+    font-size: 1.5rem;
+    color: $primary-400;
+
+
+  }
+
+}
