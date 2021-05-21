@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Frontend Mentor - Loopstudios landing page",
   "main": "index.html",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "parcel-bundler": "^1.12.5",
     "sass": "^1.33.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
