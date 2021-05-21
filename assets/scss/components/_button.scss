@@ -1,14 +1,26 @@
-@import "../abstracts/variables";
-@import "../base/typography";
+@use "../abstracts/variables";
+@use "../base/typography";
+@use "../abstracts/mixins";
+
 .button{
-  @include fontAlata();
+  @include typography.fontAlata();
 
   padding: 1rem 4rem;
-  border: 1px solid $primary-700;
+  border: 1px solid variables.$primary-700;
 
   font-size: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 5px;
-  color: $primary-700;
+  color: variables.$primary-700;
+}
+
+@include mixins.mq(tabletPortrait){
+
+  .button{
+
+    font-size: 2rem;
+
+  }
+
 }

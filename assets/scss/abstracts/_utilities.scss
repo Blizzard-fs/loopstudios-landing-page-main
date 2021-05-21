@@ -1,7 +1,10 @@
-@import "variables";
-@import "../base/typography";
+@use "variables";
+@use "../base/typography";
+@use "../abstracts/mixins";
 
 .container{
+
+  position: relative;
 
   padding: 2rem;
   margin-top: 5rem;
@@ -14,26 +17,26 @@
 
   .content__title, .left__title {
 
-    @include fontJosefin();
+    @include typography.fontJosefin();
 
     padding-bottom: 2rem;
 
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
-    color: $primary-700;
+    color: variables.$primary-700;
     white-space: pre-line;
   }
 
   .content__paragraph {
 
-    @include fontAlata();
+    @include typography.fontAlata();
 
     padding: 0 2rem;
 
     text-align: center;
     line-height: 3rem;
-    color: $primary-400;
+    color: variables.$primary-400;
 
   }
 
@@ -49,5 +52,151 @@
   }
 }
 .grid{
+
   display: none;
+
 }
+
+a{
+
+  position: relative;
+
+}
+
+.container--flex{
+
+  display: flex;
+
+}
+@include mixins.mq(tabletPortrait){
+
+  .container{
+
+    text-align: center;
+
+    .content__title, .left__title {
+
+      font-size: 5rem;
+
+    }
+
+  }
+
+}
+
+@include mixins.mq(tabletLandscape){
+
+  .container{
+
+    text-align: center;
+    padding: 5rem 10rem;
+
+  }
+
+}
+
+@include mixins.mq(laptopSmall){
+
+  .container{
+
+    text-align: left;
+
+    .container__image{
+
+      max-width: 50%;
+      margin-bottom: 10rem;
+
+    }
+
+    .container__content{
+
+      max-width: 50%;
+      position: absolute;
+      bottom: 0;
+      right: 10rem;
+      background-color: variables.$primary-100;
+      padding: 8rem 0 0 8rem;
+
+    }
+
+    .content__paragraph{
+
+      text-align: left;
+      padding: 0;
+
+    }
+
+    .content__title, .left__title{
+
+      font-size: 4rem;
+
+    }
+
+    .container__left, .container__right{
+
+      width: 50%;
+
+    }
+
+    .container__right{
+
+      text-align: right;
+
+    }
+
+    .left__title{
+
+      text-align: left;
+      white-space: normal;
+
+    }
+
+  }
+
+  .grid{
+
+    padding: 5rem 10rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    // Yes I don't give a fuck about gap usability! ;)
+
+    gap: 2.5rem;
+  }
+
+}
+@include mixins.mq(desktop){
+
+  .page-limit{
+    width: 1440px !important;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .container--flex .page-limit{
+    display: flex;
+  }
+
+  .grid{
+    display: block;
+    padding: 5rem 10rem;
+  }
+
+  .grid .page-limit{
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    // Yes I don't give a fuck about gap usability! ;)
+
+    gap: 2.5rem;
+
+  }
+
+}
+

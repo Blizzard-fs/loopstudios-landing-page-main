@@ -1,0 +1,76 @@
+@use "variables";
+
+@mixin link__underline(){
+
+  content: '';
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: calc(1em + 10px);
+  left: 50%;
+  transform: translate(-50%);
+  background-color: variables.$primary-100;
+  max-width: 0;
+  transition: 0.25s;
+}
+
+@mixin link__underline--hover($property, $time, $method){
+
+  max-width: 100%;
+  transition: $property $time $method;
+
+}
+
+@mixin mq ($size){
+
+  @if $size == tabletPortrait {
+
+    @media (min-width: 600px) {
+
+      @content;
+
+    }
+
+  }
+
+  @else if $size == tabletLandscape {
+
+    @media (min-width: 900px) {
+
+      @content;
+
+    }
+
+  }
+
+  @else if $size == laptopSmall {
+
+    @media (min-width: 1008px) {
+
+      @content;
+
+    }
+
+  }
+
+  @else if $size == laptop {
+
+    @media (min-width: 1200px) {
+
+      @content;
+
+    }
+
+  }
+
+  @if $size == desktop {
+
+    @media (min-width: 1440px) {
+
+      @content;
+
+    }
+
+  }
+
+}

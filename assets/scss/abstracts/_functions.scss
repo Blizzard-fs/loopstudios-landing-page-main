@@ -1,0 +1,19 @@
+@use "variables";
+
+@each $card, $url in variables.$mobile-urls{
+  .#{$card} {
+    background-image: $url;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+}
+
+@each $card, $url in variables.$desktop-urls{
+  .#{$card} {
+    background-image: $url;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+}

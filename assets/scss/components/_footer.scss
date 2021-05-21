@@ -1,11 +1,12 @@
-@import "../abstracts/variables";
-@import "../base/typography";
+@use "../abstracts/variables";
+@use "../base/typography";
+@use "../abstracts/mixins";
 
 .footer{
 
   margin-top: 8rem;
   padding: 5rem;
-  background-color: $primary-700;
+  background-color: variables.$primary-700;
   display: flex;
   flex-direction: column;
 
@@ -27,13 +28,19 @@
 
   .list__item{
 
-    @include fontAlata();
+    @include typography.fontAlata();
 
     padding: 1.5rem 0;
 
     & a {
-      color: $primary-100;
+
+      &::before{@include mixins.link__underline();}
+
+      &:hover::before{@include mixins.link__underline--hover( max-width, 0.5s, ease-in-out );}
+
+      color: variables.$primary-100;
       text-decoration: none;
+
     }
 
   }
@@ -48,15 +55,68 @@
 
   }
 
+  .socials__icon{
+
+      &::before{@include mixins.link__underline();}
+
+      &:hover::before{@include mixins.link__underline--hover( max-width, 0.5s, ease-in-out );}
+
+
+    img{
+
+      width: 24px;
+      height: 24px;
+
+    }
+
+  }
+
   .footer__rights{
 
-    @include fontAlata();
+    @include typography.fontAlata();
 
     padding: 1em 0;
 
     font-size: 1.5rem;
-    color: $primary-400;
+    color: variables.$primary-400;
 
+  }
+
+  .attribution{
+    @include typography.fontAlata;
+
+    font-size: 1.5rem;
+    color: variables.$primary-400;
+
+    a{
+
+      color: variables.$primary-100;
+      text-decoration: none;
+      transition: 0.25s;
+
+      &:hover{
+
+        color: variables.$primary-400;
+        transition: 0.25s;
+
+      }
+
+    }
+
+  }
+
+}
+
+
+@include mixins.mq(tabletPortrait){
+
+  .footer{
+
+    .list__item{
+
+      font-size: 2rem;
+
+    }
 
   }
 

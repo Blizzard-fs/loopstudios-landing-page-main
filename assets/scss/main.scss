@@ -1,6 +1,7 @@
+@use "base/reset";
 @use "abstracts/utilities";
 @use "abstracts/functions";
-@use "base/reset";
+@use "abstracts/mixins";
 @use "base/base";
 @use "base/typography";
 @use "components/footer";
