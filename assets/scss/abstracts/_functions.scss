@@ -1,4 +1,5 @@
 @use "variables";
+@use "mixins";
 
 @each $card, $url in variables.$mobile-urls{
   .#{$card} {
@@ -9,11 +10,13 @@
   }
 }
 
-@each $card, $url in variables.$desktop-urls{
-  .#{$card} {
-    background-image: $url;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50%;
+@include mixins.mq(laptopSmall){
+  @each $card, $url in variables.$desktop-urls{
+    .#{$card} {
+      background-image: $url;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
   }
 }

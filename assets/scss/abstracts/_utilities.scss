@@ -68,6 +68,12 @@ a{
   display: flex;
 
 }
+.page-limit{
+
+  width: 100%;
+
+}
+
 @include mixins.mq(tabletPortrait){
 
   .container{
@@ -151,32 +157,8 @@ a{
 
     }
 
-  }
 
-  .grid{
 
-    padding: 5rem 10rem;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-
-    // Yes I don't give a fuck about gap usability! ;)
-
-    gap: 2.5rem;
-  }
-
-}
-@include mixins.mq(desktop){
-
-  .page-limit{
-    width: 1440px !important;
-    margin: 0 auto;
-    position: relative;
-  }
-
-  .container--flex .page-limit{
-    display: flex;
   }
 
   .grid{
@@ -196,6 +178,19 @@ a{
 
     gap: 2.5rem;
 
+  }
+
+  .container--flex .page-limit{
+    display: flex;
+  }
+
+}
+@include mixins.mq(desktop){
+
+  .page-limit{
+    width: calc(1440px - 20rem) !important;
+    margin: 0 auto;
+    position: relative;
   }
 
 }
