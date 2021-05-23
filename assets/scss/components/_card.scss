@@ -60,6 +60,28 @@
   flex-direction: column;
   position: relative;
 
+  transition: 0.25s ease-in-out;
+
+  &:hover{
+
+    &::before{
+
+      cursor: pointer;
+      background: rgba(255,255,255,0.45);
+      color: variables.$primary-700;
+
+      transition: 0.25s ease-in-out;
+
+    }
+
+  }
+
+  .grid__card:hover h3{
+
+    color: black;
+    transition: 0.25s ease-in-out;
+
+  }
   &:before{
 
     content: "";

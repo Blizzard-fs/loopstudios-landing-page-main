@@ -13,7 +13,20 @@
   text-decoration: none;
   letter-spacing: 5px;
   color: variables.$primary-700;
+
+  transition: 0.25s ease-in-out;
+
+  &:hover{
+
+    background-color: variables.$primary-700;
+    color: variables.$primary-100;
+    transition: 0.25s ease-in-out;
+
+  }
+
 }
+
+
 
 @include mixins.mq(tabletPortrait){
 
