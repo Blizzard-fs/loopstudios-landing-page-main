@@ -4,12 +4,15 @@
 
 .flex__card{
 
-  aspect-ratio: 654/240;
+  //aspect-ratio: 654/240;
+  //object-fit: cover;
+  padding-bottom: 35%;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   margin-bottom: 2.5rem;
   position: relative;
+  text-align: left;
 
   &:before{
 
